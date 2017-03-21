@@ -1,0 +1,25 @@
+---
+
+- name: Add Microsoft public key
+  become: yes
+  rpm_key:
+    state: present
+    key: https://packages.microsoft.com/keys/microsoft.asc
+
+- name: Add Microsoft repository
+  become: yes
+  yum_repository:
+    name: vscode
+    file: vscode
+    description: Microsoft Visual Studio Code - $basearch
+    baseurl: https://packages.microsoft.com/yumrepos/vscode
+    enabled: false
+    gpgcheck: false
+    gpgkey: https://packages.microsoft.com/keys/microsoft.asc
+
+- name: Install Visual Studio Code
+  become: yes
+  dnf:
+    name: code
+    enablerepo: vscode
+    state: "{{ vscode_update }}"

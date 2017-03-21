@@ -1,0 +1,4 @@
+---
+
+# Keep Visual Studio Code update (present | latest | absent).
+vscode_update: latest
