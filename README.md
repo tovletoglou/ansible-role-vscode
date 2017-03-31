@@ -36,4 +36,4 @@ MIT
 
 ## Author Information
 
-Apostolos Tovletoglou [ansible-role-vscode](https://github.com/tovletoglou/ansible-vscode)
+Apostolos Tovletoglou [ansible-role-vscode](https://github.com/tovletoglou/ansible-role-vscode)
