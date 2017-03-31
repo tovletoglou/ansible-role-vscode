@@ -12,15 +12,15 @@ The role may run on other systems, but it is not tested.
 
 ## Role Variables
 
-Keep VSCode update (present | latest | absent).
+Keep VSCode update (`present | latest | absent`).
 
-```
+```yml
 vscode_update: latest
 ```
 
 ## Example
 
-```
+```yml
 - hosts: all
   roles:
     - ansible-role-vscode
